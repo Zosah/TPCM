@@ -1,0 +1,17 @@
+# 部署服务
+docker compose up -d --build
+
+# 查看日志
+docker compose logs -f
+
+# 重启服务
+docker compose restart
+
+# 重新构建并部署（代码更新时使用）
+docker compose up -d --build
+
+# 停止服务
+docker compose down
+
+# 启动服务
+docker compose up -d

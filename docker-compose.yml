@@ -1,0 +1,10 @@
+version: '3'
+services:
+  announcement-monitor:
+    build: .
+    container_name: announcement-monitor
+    restart: always
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - TZ=Asia/Shanghai 
