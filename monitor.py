@@ -249,21 +249,21 @@ class AnnouncementMonitor:
         """运行监控"""
         # 发送启动通知
         startup_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        startup_message = {
-            "msgtype": "markdown",
-            "markdown": {
-                "content": (
-                    f"### 🚀 公告监控服务已启动\n\n" +
-                    f"**启动时间**：{startup_time}\n\n" +
-                    f"**监控对象**：\n" +
-                    "\n".join([f"- {source.__class__.__name__.replace('Source', '')}" 
-                              for source in self.sources]) + "\n\n" +
-                    f"**巡检间隔**：{POLL_INTERVAL//60} 分钟"
-                )
-            }
-        }
+        # startup_message = {
+        #     "msgtype": "markdown",
+        #     "markdown": {
+        #         "content": (
+        #             f"### 🚀 公告监控服务已启动\n\n" +
+        #             f"**启动时间**：{startup_time}\n\n" +
+        #             f"**监控对象**：\n" +
+        #             "\n".join([f"- {source.__class__.__name__.replace('Source', '')}" 
+        #                       for source in self.sources]) + "\n\n" +
+        #             f"**巡检间隔**：{POLL_INTERVAL//60} 分钟"
+        #         )
+        #     }
+        # }
         
-        requests.post(WEBHOOK_URL, json=startup_message, proxies={'http': None, 'https': None})
+        # requests.post(WEBHOOK_URL, json=startup_message, proxies={'http': None, 'https': None})
         print(f"监控服务已启动，当前时间: {startup_time}")
         
         while True:
