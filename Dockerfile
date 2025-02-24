@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # 复制源代码
 COPY monitor.py .
+COPY .env .
 
 # 设置时区为中国时区
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
