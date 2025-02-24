@@ -1,8 +1,8 @@
 version: '3'
 services:
-  announcement-monitor:
+  TPCM-service:
     build: .
-    container_name: announcement-monitor
+    container_name: TPCM
     restart: always
     volumes:
       - ./logs:/app/logs
