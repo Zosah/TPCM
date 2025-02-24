@@ -8,10 +8,10 @@ docker compose restart
 docker compose down
 
 # 重新构建+部署（带项目名称）
-docker compose -p TPCM up -d --build
+docker compose -p tpcm up -d --build
 
 # 启动服务（带项目名称）
-docker compose -p TPCM up -d
+docker compose -p tpcm up -d
 
 # 停止指定项目名称的服务
-docker compose -p TPCM down
+docker compose -p tpcm down
