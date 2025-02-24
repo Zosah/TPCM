@@ -1,6 +1,6 @@
 version: '3'
 services:
-  TPCM-service:
+  tpcm-service:
     build: .
     container_name: TPCM
     restart: always
